@@ -35,7 +35,7 @@ jobs:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
           #workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_POOL_ID }}
           #service_account: ${{ secrets.SERVICE_ACCOUNT }}
-      - name: Set up Cloud SDK
+      - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.3.0
       - name: Create API bundle
         run: zip -r proxy.zip apiproxy
